@@ -1,0 +1,33 @@
+<h1>Lista de Clientes</h1>
+
+
+
+<table class="table table-striped table-borderlles">
+
+	<thead class="thead-dark">
+		<th>#</th><th>Nome</th><th>Telefone</th><th>Rua</th><th>Numero</th>
+	</thead>
+
+	<tbody>
+	{loop="$user"}
+		<tr>
+			<td data-id_cliente="{$value.idclient}">{$value.idclient}</td>
+			<td data-desnome="{$value.desnome}">{$value.desnome}</td>
+			<td data-destel="{$value.destel}">{$value.destel}</td>
+			<td data-desrua="{$value.desrua}">{$value.desrua}</td>
+			<td data-desnum="{$value.desnum}">{$value.desnum}</td>
+
+			<td><button class="btn_selecionar alert-success" data-pagina_clicada="{$value.idclient}">Selecionar</button></td>
+			<td><button class="btn_atualizar btn-primary">Update</button></td>
+			<td><button class="btn_deletar alert-danger">Delete</button></td>
+		</tr>
+		
+	{/loop}
+	</tbody>
+
+</table>
+</div>
+
+
+<script type="text/javascript" src="/anne_doces/public/script/java_script/modal_cliente.js"></script>
+
